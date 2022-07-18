@@ -71,7 +71,7 @@ def main():
 
     # define paths to folders
     files  = "C:/Users/JJ/Python/Extract_and_Send/source file/"
-    destination  = "C:/Users/Python/Extract_and_Send/final files/"
+    destination  = "C:/Users/JJ/Python/Extract_and_Send/final files/"
     elems_not_found = "elements not found.txt"
 
     #check if the required folders exist
@@ -199,7 +199,7 @@ def main():
                 tbms.to_excel(writer, sheet_name='TBMs', index=False)
                 summ.to_excel(writer, sheet_name='summary', index=False)
 
-		#generate email
+        #generate email
         send_email(emails,unit,mail_message,file_name,destination,my_cycle,answer)
 
     end_time = datetime.now()
