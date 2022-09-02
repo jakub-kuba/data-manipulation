@@ -7,7 +7,7 @@ The program reads the Excel source file and, based on the data defined in the co
       -   [Operation Type]: _Full_ - creates the following sheets in the final file: _current data_, _TBMs_, _summary_. _Simple_ - creates the _summary_ sheet only.
    - **emails** sheet:
       -  There are two types of emails and their content can be edited. Each cell relates to one paragraph. Additional paragraphs can also be added.
-      -  < last day of the previous month >  will not be dispplayed but replaced with the proper date.
+      -  < last day of the previous month >  will not be displayed but replaced with the proper date.
    - **cycles, systems** sheets: read-only sheets.
 
 - **source file:** - it contains three worksheets and must be placed in the source file/ subfolder.

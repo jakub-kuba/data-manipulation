@@ -1,3 +1,5 @@
+# Author: jakub-kuba
+
 import os, sys
 from os import path
 import pandas as pd
@@ -45,7 +47,6 @@ def ask_display_send(question):
 
 def send_email(emails,unit,mail_message,file_name,destination,my_cycle,answer):
     """Sending emails"""
-    outlook = win32com.client
     outlook = win32com.client.Dispatch('outlook.application')
     mail = outlook.CreateItem(0)
     mail.To = emails
@@ -131,10 +132,9 @@ def main():
     ls = prevday_lastmonth()
     email_cols = ['email 1', 'email 2']
     mails[email_cols] = mails[email_cols].replace('<last day of the previous month>', ls, regex=True)
-    mail_text1 = mails['email 1'].to_list()
-    mail_text1 = [x for x in mail_text1 if str(x) != 'nan'] #this prevents from adding nans to the list
-    mail_text2 = mails['email 2'].to_list()
-    mail_text2 = [x for x in mail_text2 if str(x) != 'nan']
+    #!= 'nan'  prevents from adding empty cells to the list
+    mail_text1 = [x for x in mails['email 1'].to_list() if str(x) != 'nan']
+    mail_text2 = [x for x in mails['email 2'].to_list() if str(x) != 'nan']
 
     #loading the source file
     all_sheets =  pd.ExcelFile(source_file)
