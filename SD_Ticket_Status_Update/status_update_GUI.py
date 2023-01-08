@@ -7,6 +7,7 @@ from tkinter.filedialog import askopenfile
 import pandas as pd
 import numpy as np
 from datetime import datetime
+import os
 
 class Application(Frame):
     """App for update statuses"""
@@ -192,6 +193,13 @@ class Application(Frame):
             div = len(full) / row_limit
             mult = int(div)
             sub = len_full - (mult * row_limit)
+
+            #create 'results' folder if doesn't exist
+            path = 'results'
+            isExist = os.path.exists(path)
+
+            if not isExist:
+                os.makedirs(path)
 
             #if number of rows is more than row_limit, split the file into parts
             if len_full <= row_limit:
