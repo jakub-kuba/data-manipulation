@@ -6,3 +6,6 @@ Main libraries: pandas
 
 - [<b>Types_of_Movements</b>](https://github.com/jakub-kuba/data-manipulation/tree/main/Types_of_Movements) - A program that generates the type of moves for each IDs, in accordance with the established hierarchy and logic.<br>
 Main libraries: pandas
+
+- [<b>Reshuffle</b>](https://github.com/jakub-kuba/data-manipulation/tree/main/Reshuffle) - A program that converts a source file to the expected format.<br>
+Main libraries: pandas
